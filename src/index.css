@@ -3,3 +3,46 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --almost-black: rgb(29, 29, 32);    
+    --almost-black-hover: rgb(46, 46, 51);
+    --almost-blue: rgb(23, 61, 255);
+    --almost-blue-hover: rgb(65, 108, 255);
+}
+
+body {
+    font-family: ui-sans-serif, system-ui;
+}
+
+/* -- GENERAL -- */ 
+
+button {
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+/* -- GENERICS ELEMENTS -- */
+
+.blue-button {
+    background-color: var(--almost-blue);
+    color: white;
+    padding: 10px 10px;
+}
+
+.blue-button:hover {
+    background-color: var(--almost-blue-hover);
+}
+
+.dark-button {
+    background-color: var(--almost-black);
+    border: 1px solid rgba(255, 255, 255, .4);
+    padding: 10px 10px;
+    color: white;
+}
+
+.dark-button:hover {
+    background-color: var(--almost-black-hover);
+}

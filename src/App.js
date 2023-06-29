@@ -1,4 +1,6 @@
 import React from 'react';
+import CV from "./components/CV";
+
 
 class App extends React.Component {
     constructor(props) {
@@ -7,7 +9,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <p>Yeet</p>
+            <CV/>
         );
     }
 }
