@@ -7,7 +7,7 @@ class Form extends React.Component {
 
     render() {
         return (
-            <p>Form</p>
+            <p></p>
         );
     }
 }

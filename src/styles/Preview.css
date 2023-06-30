@@ -1,5 +1,6 @@
 .preview-wrapper {
-    --white: RGB(255, 255, 255);
+    background-color: RGB(243, 242, 239);
+    min-width: 350px;
 }
 
 .preview__header-wrapper {
@@ -9,4 +10,93 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+}
+
+.page-wrapper {
+    padding: 20px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: RGB(51, 51, 51);
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 0 7px 7px rgb(100, 100, 100, .2);
+    margin-bottom: 20px;
+}
+
+.page__content {
+    height: 100%;
+    margin-left: 37%;
+    width: 63%;
+    background-color: white;
+}
+
+.page__profile {
+    z-index: 3;
+    position: absolute;
+    top: 5%;
+    outline: 10px solid white;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: RGB(153, 199, 199);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8vw;
+    padding: 2% 10% 2% 5%;
+}
+
+.profile__name {
+    text-transform: uppercase;
+    margin-bottom: 2vw;
+}
+
+.profile__infos {
+    width: 60%;
+}
+
+.profile__infos > p {
+    margin-bottom: .5vw;
+}
+
+.profile__infos > p > svg {
+    padding-right: 1vw;
+}
+
+.profile__image {
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+    object-fit: cover;
+    outline: .5vw solid white;
+}
+
+.page__outer {
+    position: relative;
+    padding-top: 140%; 
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.page__download-button {
+    font-size: 1rem; 
+    display: flex;
+    gap: 7px;
+    align-self: end;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 800px) {
+
 }
