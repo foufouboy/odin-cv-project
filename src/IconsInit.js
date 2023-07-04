@@ -6,6 +6,9 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons"
 import { faPlus } from "@fortawesome/free-solid-svg-icons"
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
-library.add(fas, faDownload, faArrowLeft, faChevronUp, faChevronDown, faPlus, faMagnifyingGlass);
+library.add(fas, faDownload, faArrowLeft, faChevronUp, faChevronDown, faPlus, faMagnifyingGlass, faEnvelope, faPhone, faHouse);
 

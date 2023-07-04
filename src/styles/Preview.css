@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
 .preview-wrapper {
     background-color: RGB(243, 242, 239);
     min-width: 350px;
+    font-family: "Poppins";
+    display: flex;
+    flex-flow: column;
 }
 
 .preview__header-wrapper {
@@ -14,13 +19,12 @@
 
 .page-wrapper {
     padding: 20px;
-    height: 700px;
     display: flex;
     flex-direction: column;
-    max-width: 800px;
 }
 
 .page {
+    background: linear-gradient(to right, rgb(51, 51, 51) 37%, white 37%);
     position: absolute;
     top: 0;
     left: 0;
@@ -31,22 +35,15 @@
     height: 100%;
     box-shadow: 2px 0 7px 7px rgb(100, 100, 100, .2);
     margin-bottom: 20px;
-}
-
-.page__content {
-    height: 100%;
-    margin-left: 37%;
-    width: 63%;
-    background-color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 8%;
+    overflow: hidden;
 }
 
 .page__profile {
-    z-index: 3;
-    position: absolute;
-    top: 5%;
-    outline: 10px solid white;
-    left: 50%;
-    transform: translateX(-50%);
+    border: 10px solid white;
     width: 80%;
     background-color: RGB(153, 199, 199);
     color: white;
@@ -57,9 +54,16 @@
     padding: 2% 10% 2% 5%;
 }
 
+.page__content {
+    margin-top: 3%;
+    margin-left: 40%;
+    align-self: start;
+}
+
 .profile__name {
     text-transform: uppercase;
-    margin-bottom: 2vw;
+    margin-bottom: 5%;
+    font-weight: 500;
 }
 
 .profile__infos {
@@ -67,11 +71,13 @@
 }
 
 .profile__infos > p {
-    margin-bottom: .5vw;
+    margin-bottom: 2%;
+    display: flex;
+    overflow-wrap: anywhere;
 }
 
 .profile__infos > p > svg {
-    padding-right: 1vw;
+    padding-right: 3%;
 }
 
 .profile__image {
@@ -79,7 +85,8 @@
     width: 15vw;
     border-radius: 50%;
     object-fit: cover;
-    outline: .5vw solid white;
+    background: white;
+    padding: 1%;
 }
 
 .page__outer {
@@ -89,14 +96,45 @@
     margin-bottom: 20px;
 }
 
+.content__subsection__title {
+    font-size: 2vw;
+    color: white;
+    background-color: RGB(153, 199, 199);
+    padding: 0 4%;
+    width: fit-content;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.cv-entry {
+    font-size: 1.5vw;
+    margin: 4% 0;
+}
+
+.entry__name-and-date {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5%;
+}
+
+.cv-entry .name {
+    font-weight: bold;
+}
+
+.cv-entry .entry__location {
+    color: rgb(51, 51, 51, .7) 
+}
+
+.cv-entry .name,
+.cv-entry .entry__location,
+.cv-entry .entry__description {
+    width: 40%;
+}
+
 .page__download-button {
     font-size: 1rem; 
     display: flex;
     gap: 7px;
     align-self: end;
     margin-bottom: 30px;
-}
-
-@media screen and (min-width: 800px) {
-
 }
