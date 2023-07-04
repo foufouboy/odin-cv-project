@@ -6,31 +6,17 @@ import "../../styles/Preview.css";
 class Preview extends React.Component {
     constructor(props) {
         super(props);    
-        this.state = {
-            docRef: React.createRef(),
-        }
-
-        this.setDocRef = this.setDocRef.bind(this);
-    }
-
-    setDocRef(ref) {
-        this.setState(prevState => {
-            return {
-                ...prevState,
-                docRef: ref,
-            }
-        });
+        this.docRef = React.createRef()
     }
 
     render() {
         return (
             <div className="preview-wrapper">
                 <Header 
-                    docRef={this.state.docRef}
+                    docRef={this.docRef}
                 />
                 <Page 
-                    docRef={this.state.docRef}
-                    setDocRef={this.setDocRef}  
+                    docRef={this.docRef}
                 />
             </div>
         );

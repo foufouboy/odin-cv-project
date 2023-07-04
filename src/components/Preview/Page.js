@@ -10,14 +10,12 @@ class Page extends React.Component {
 
     render() {
 
-        let { docRef, setDocRef } = this.props;
+        let { docRef } = this.props;
 
         return (
                 <div className="page-wrapper">
                     <div className="page__outer">
-                        <InnerPage ref={e => {
-                            return docRef = e;
-                        }}/>
+                        <InnerPage ref={docRef}/>
                     </div>
                     <DownloadButton
                         button={() => {
@@ -28,11 +26,11 @@ class Page extends React.Component {
                                 </button>
                             ); 
                         }}  
-                        docRef={() => docRef}
+                        docRef={() => docRef.current}
                     />
                 </div>
         );
     }
 }
 
-export default Page;
+export default React.forwardRef((props, ref) => <Page docRef={ref} {...props}/>);

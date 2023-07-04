@@ -9,7 +9,6 @@ class Header extends React.Component {
 
     render() {
         const { docRef } = this.props;
-        console.log(docRef);
 
         return (
             <div className="preview__header-wrapper">
@@ -25,11 +24,11 @@ class Header extends React.Component {
                             </button>
                         );
                     }}
-                    docRef={() => docRef}
+                    docRef={() => docRef.current}
                 />
             </div>
         );
     }
 }
 
-export default Header;
+export default React.forwardRef((props, ref) => <Header docRef={ref} {...props}/>);
