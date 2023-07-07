@@ -1,0 +1,52 @@
+
+.form__header {
+    display: flex;
+    background-color: var(--almost-black);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.form-wrapper {
+    padding: 30px 20px; 
+    padding-top: 0;
+    max-width: 45rem;
+    margin: auto;
+}
+
+.colps-section-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0; 
+}
+
+.form-profile__first-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.form-profile__name-email {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-profile__names {
+    display: flex;
+    gap: 15px;
+}
+
+@media screen and (max-width: 640px) {
+
+    .form-profile__first-section, .form-profile__names {
+        flex-direction: column;
+    }
+    
+}

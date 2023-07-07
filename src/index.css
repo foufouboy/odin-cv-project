@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -9,11 +11,13 @@
     --almost-black-hover: rgb(46, 46, 51);
     --almost-blue: rgb(23, 61, 255);
     --almost-blue-hover: rgb(65, 108, 255);
+    --thin-grey: rgb(50, 50, 50, .2);
+    --little-grey: rgb(50, 50, 50, .4);
+    --input-grey: rgb(82, 82, 90);
 }
 
 body {
     font-family: ui-sans-serif, system-ui;
-    background-color: RGB(243, 242, 239);
 }
 
 /* -- GENERAL -- */ 
@@ -48,4 +52,96 @@ button {
 
 .dark-button:hover {
     background-color: var(--almost-black-hover);
+}
+
+.white-button {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 1px solid var(--little-grey);
+    transition: 
+        border .1s ease,
+        background-color .3s ease;
+}
+
+.white-button:hover {
+    border: 1px solid var(--almost-blue);
+    background-color: rgb(200, 200, 200, .2);
+}
+
+.white-button:active {
+    background-color: rgb(200, 200, 200, .6);
+    
+}
+
+.white-button svg {
+    color: rgb(50, 50, 50);
+}
+
+.colps-element {
+    border-bottom: 1px solid var(--thin-grey);
+}
+
+.colps-section__content {
+    margin-bottom: 40px;
+}
+
+.colps-section__title {
+    font-size: 1.3rem;
+}
+
+.form-input-container {
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+    padding: .5rem 0;
+}
+
+.form-input-container label {
+    color: var(--input-grey);
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.form-input-container input {
+    border: 1px solid rgb(100, 100, 100, .0);
+    padding: 10px 12px;
+    font-family: inherit;
+    background-color: rgb(100, 100, 100, .1);
+    font-size: 1rem;
+    border-radius: 3px;
+    transition: border .2s ease;
+    width: 100%;
+}
+
+.form-input-container input:focus {
+    outline: 0;
+    border: 1px solid var(--almost-blue-hover);
+}
+
+.form-input-container input.photo-input {
+    position: relative;
+    width: 125px;
+    height: 125px;
+}
+
+.form-input-container input.photo-input:focus {
+    border: 1px solid var(--almost-blue);
+}
+
+label[for=photo] {
+    position: relative;
+}
+
+label[for=photo]::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 1px;
+    width: 123px;
+    height: 122px;
+    background-color: RGB(239, 239, 239);
+    opacity: 1;
+    z-index: 3;
+    border-radius: 3px;
 }
