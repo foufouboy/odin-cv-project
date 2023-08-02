@@ -19,13 +19,13 @@ class CollapsibleSection extends React.Component {
 
     render() {
 
-        const { children } = this.props;
+        const { children, name } = this.props;
         const { active } = this.state;
 
         return (
                 <div className="colps-element">
                     <div className="colps-section-wrapper">
-                        <h3 className="colps-section__title">Profile</h3>
+                        <h3 className="colps-section__title">{name}</h3>
                         <button className="white-button colps-section__trigger" onClick={this.onTriggerClick}>
                             <FontAwesomeIcon icon="fa-solid fa-chevron-down" rotation={active ? 180 : 0}size="lg"/>
                         </button>

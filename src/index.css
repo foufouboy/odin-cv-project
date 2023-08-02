@@ -97,10 +97,29 @@ button {
     padding: .5rem 0;
 }
 
-.form-input-container label {
+label {
     color: var(--input-grey);
     font-size: .9rem;
     font-weight: 500;
+}
+
+textarea {
+    margin-top: 3px;
+    border: 1px solid rgb(100, 100, 100, .0);
+    padding: 10px 12px;
+    font-family: inherit;
+    background-color: rgb(100, 100, 100, .1);
+    font-size: 1rem;
+    border-radius: 3px;
+    transition: border .2s ease;
+    width: 100%;
+    resize: none;
+    outline: none;
+}
+
+textarea:focus {
+    outline: 0;
+    border: 1px solid var(--almost-blue-hover);
 }
 
 .form-input-container input {
@@ -144,4 +163,13 @@ label[for=photo]::after {
     opacity: 1;
     z-index: 3;
     border-radius: 3px;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 360px;
+    width: 55px;
+    height: 55px;
 }

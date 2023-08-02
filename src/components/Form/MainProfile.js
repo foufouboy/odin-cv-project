@@ -10,7 +10,7 @@ class MainProfile extends React.Component {
     render() {
         return (
             <div className="form-profile-wrapper">
-                <CollapsibleSection active={true}>
+                <CollapsibleSection active={false} name="Profile">
                     <div className="form-profile__first-section">
                         <FormInput id="photo" label="Photo" type="file" classesToAdd="photo-input"/>
                         <div className="form-profile__name-email">

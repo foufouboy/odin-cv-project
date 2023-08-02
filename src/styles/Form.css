@@ -43,7 +43,86 @@
     gap: 15px;
 }
 
+.form-entry-element {
+    border: 1px solid var(--little-grey); 
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.entry-resume {
+    display: flex;
+    justify-content: space-between;
+}
+
+.entry-resume .infos {
+    display: flex;
+    flex-flow: column;
+    gap: 3px;
+}
+
+.entry-resume .infos p {
+    font-size: 17px;
+}
+
+.entry-resume .infos .title {
+    font-weight: bold;
+}
+
+.entry-resume .infos .place {
+    color: rgb(100, 100, 100, .7);
+}
+
+.entry-form__container {
+    display: flex;
+    flex-flow: column;
+}
+
+.end-buttons {
+    display: flex;
+    align-self: end;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.end-buttons button.white-button {
+    height: 35px;
+    width: 35px;
+}
+
+.end-buttons button.blue-button {
+    display: flex;
+    gap: 8px;
+    font-size: 15px;
+}
+
+.entry-form__container .employer-city,
+.entry-form__container .dates {
+    display: flex; 
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.entry-form__container .employer-city *, 
+.entry-form__container .dates *{
+    flex-grow: 1;
+}
+
+.white-button.add-entry {
+    margin-top: 15px;
+    width: auto;
+    color: var(--almost-black);
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    padding: 5px 10px;
+    gap: 15px;
+    align-items: center;
+}
+
 @media screen and (max-width: 640px) {
+
 
     .form-profile__first-section, .form-profile__names {
         flex-direction: column;
