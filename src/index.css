@@ -20,6 +20,15 @@ body {
     font-family: ui-sans-serif, system-ui;
 }
 
+#root {
+    display: flex;
+    width: 100%;
+}
+
+#root > * {
+    flex-grow: 1;
+}
+
 /* -- GENERAL -- */ 
 
 button {
@@ -31,6 +40,10 @@ button {
 }
 
 /* -- GENERICS ELEMENTS -- */
+
+.unactive {
+    display: none !important;
+}
 
 .blue-button {
     background-color: var(--almost-blue);

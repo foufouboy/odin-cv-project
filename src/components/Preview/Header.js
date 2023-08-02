@@ -8,11 +8,11 @@ class Header extends React.Component {
     }
 
     render() {
-        const { docRef } = this.props;
+        const { docRef, previewSwitcher } = this.props;
 
         return (
             <div className="preview__header-wrapper">
-                <button className="dark-button preview__return">
+                <button className="dark-button preview__return" onClick={previewSwitcher}>
                     <FontAwesomeIcon icon="fa-solid fa-arrow-left" size="lg"/>
                 </button>
                 <p>Preview</p>

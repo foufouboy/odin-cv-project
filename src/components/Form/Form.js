@@ -13,6 +13,8 @@ class Form extends React.Component {
     }
 
     render() {
+        const { previewSwitcher } = this.props;
+
         return (
             <div className="form-page">
                 <Header/>
@@ -20,7 +22,7 @@ class Form extends React.Component {
                     <MainProfile/>
                     <Education/>
                     <Experience/>
-                    <FloatingButton>
+                    <FloatingButton previewSwitcher={previewSwitcher}>
                         <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" size="xl"/>
                     </FloatingButton>
                 </div>

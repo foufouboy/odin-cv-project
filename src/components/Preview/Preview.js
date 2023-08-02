@@ -10,10 +10,13 @@ class Preview extends React.Component {
     }
 
     render() {
+        const { active, previewSwitcher } = this.props;
+
         return (
-            <div className="preview-wrapper">
+            <div className={"preview-wrapper " + (active ? "" : "unactive")}>
                 <Header 
                     docRef={this.docRef}
+                    previewSwitcher={previewSwitcher}
                 />
                 <Page 
                     docRef={this.docRef}

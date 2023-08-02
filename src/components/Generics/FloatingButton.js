@@ -7,10 +7,10 @@ class FloatingButton extends React.Component {
     }
 
     render() {
-        let { children, classesToAdd } = this.props;
+        let { children, classesToAdd, previewSwitcher } = this.props;
 
         return (
-            <button className={"blue-button floating-button"}>
+            <button className={"blue-button floating-button"} onClick={previewSwitcher}>
                 { children ? children : "Nah"}
             </button>
         );
