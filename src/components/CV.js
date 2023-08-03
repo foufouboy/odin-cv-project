@@ -21,6 +21,7 @@ class CV extends React.Component {
         this.changeExperience = this.changeExperience.bind(this);
         this.deleteEducation = this.deleteEducation.bind(this);
         this.deleteExperience = this.deleteExperience.bind(this);
+        this.openEntry = this.openEntry.bind(this);
     }
 
     previewSwitcher() {
@@ -59,6 +60,8 @@ class CV extends React.Component {
     /* EDUCATIONS && EXPERIENCES */
 
     addEducation() {
+        const newId = uuidv4();
+
         this.setState(prevState => ({
             ...prevState,
             data: {
@@ -66,7 +69,7 @@ class CV extends React.Component {
                 educations: [
                     ...prevState.data.educations,
                     {
-                        id: uuidv4(),
+                        id: newId,
                         title: "",
                         establishment: "",
                         place: "",
@@ -78,6 +81,8 @@ class CV extends React.Component {
                 ],
             }, 
         }));
+
+        this.openEntry("educations", newId, true);
     }
 
     deleteEducation(id) {
@@ -89,7 +94,6 @@ class CV extends React.Component {
             }
         }));
 
-        console.log(this.state.data);
     }
 
     changeEducation(e, id) {
@@ -110,7 +114,29 @@ class CV extends React.Component {
         }));
     }
 
+    openEntry(category, id, value) {
+        this.setState(prevState => ({
+            ...prevState,
+            data: {
+                ...prevState.data,
+                [category]: prevState.data[category].map(e => {
+                    if (e.id === id) {
+                        return {...e, open: value};
+                    } else {
+                        if (value === true) {
+                            return {...e, open: false};
+                        } else {
+                            return e;
+                        }
+                    }
+                }),
+            }
+        }))
+    }
+
     addExperience() {
+        const newId = uuidv4();
+
         this.setState(prevState => ({
             ...prevState,
             data: {
@@ -118,7 +144,7 @@ class CV extends React.Component {
                 professions: [
                     ...prevState.data.professions,
                     {
-                        id: uuidv4(),
+                        id: newId,
                         title: "",
                         establishment: "",
                         place: "",
@@ -130,6 +156,8 @@ class CV extends React.Component {
                 ],
             }, 
         }));
+
+        this.openEntry("professions", newId, true);
     }
 
     deleteExperience(id) {
@@ -179,6 +207,7 @@ class CV extends React.Component {
                 deleteExperience={this.deleteExperience}
                 changeEducation={this.changeEducation}
                 changeExperience={this.changeExperience}
+                openEntry={this.openEntry}
                 />
             </>
         );

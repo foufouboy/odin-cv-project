@@ -9,7 +9,7 @@ class Experience extends React.Component {
     }
 
     render() {
-        const { professions, addExperience, deleteExperience, changeExperience } = this.props;
+        const { professions, addExperience, deleteExperience, changeExperience, openEntry } = this.props;
 
         return (
             <div className="form-experience-wrapper">
@@ -21,11 +21,15 @@ class Experience extends React.Component {
                             data={d}
                             deleteEntry={deleteExperience}
                             changeEntry={changeExperience}
+                            openEntry={openEntry}
+                            category="professions"
                             />
 
                         );
                     })}
-                    <button className="white-button add-entry" onClick={addExperience}>
+                    <button className="white-button add-entry" onClick={() => {
+                            addExperience();
+                        }}>
                         <FontAwesomeIcon icon="fa-solid fa-plus"/>
                         <span>Add a professional experience</span>
                     </button>

@@ -22,7 +22,9 @@ class Form extends React.Component {
             deleteExperience,
             changeEducation,
             changeExperience,
+            openEntry
         } = this.props;
+
         const { profile, professions, educations } = this.props.data;
 
         return (
@@ -36,12 +38,16 @@ class Form extends React.Component {
                     educations={educations}
                     addEducation={addEducation}
                     deleteEducation={deleteEducation}
-                    changeEducation={changeEducation}/>
+                    changeEducation={changeEducation}
+                    openEntry={openEntry}
+                    />
                     <Experience 
                     professions={professions}
                     addExperience={addExperience}
                     deleteExperience={deleteExperience}
-                    changeExperience={changeExperience}/>
+                    changeExperience={changeExperience}
+                    openEntry={openEntry}
+                    />
                     <FloatingButton previewSwitcher={previewSwitcher}>
                         <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" size="xl"/>
                     </FloatingButton>

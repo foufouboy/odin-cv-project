@@ -10,7 +10,7 @@ class Education extends React.Component {
     }
 
     render() {
-        const { educations, addEducation, deleteEducation, changeEducation } = this.props;
+        const { educations, addEducation, deleteEducation, changeEducation, openEntry } = this.props;
 
         return (
             <div className="form-education-wrapper">
@@ -21,10 +21,14 @@ class Education extends React.Component {
                             key={d.id}
                             data={d} 
                             deleteEntry={deleteEducation} 
-                            changeEntry={changeEducation}/> 
+                            changeEntry={changeEducation}
+                            openEntry={openEntry} 
+                            category="educations"/>
                         );
                     })}
-                    <button className="white-button add-entry" onClick={addEducation}>
+                    <button className="white-button add-entry" onClick={() => {
+                            addEducation();
+                        }}>
                         <FontAwesomeIcon icon="fa-solid fa-plus"/>
                         <span>Add an education</span>
                     </button>
