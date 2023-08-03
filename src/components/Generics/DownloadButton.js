@@ -8,7 +8,6 @@ class DownloadButton extends React.Component {
 
     render() {
         const { button, docRef } = this.props;
-        console.log(button, docRef);
 
         return (
             <ReactToPrint

@@ -7,12 +7,16 @@ class FormInput extends React.Component {
 
     render() {
 
-        const { id, label, type, classesToAdd } = this.props;
+        const { id, label, type, classesToAdd, value, changeHandler } = this.props;
 
         return (
             <div className="form-input-container">
                 <label htmlFor={id}>{label}</label>
-                <input id={id} type={type || "text"} className={classesToAdd}/>
+                <input 
+                id={id} 
+                type={type || "text"} 
+                className={classesToAdd} 
+                onChange={changeHandler || null}/>
             </div>
         );
     }

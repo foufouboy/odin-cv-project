@@ -13,15 +13,35 @@ class Form extends React.Component {
     }
 
     render() {
-        const { previewSwitcher } = this.props;
+        const { 
+            previewSwitcher, 
+            profileChange,
+            addEducation, 
+            addExperience, 
+            deleteEducation,
+            deleteExperience,
+            changeEducation,
+            changeExperience,
+        } = this.props;
+        const { profile, professions, educations } = this.props.data;
 
         return (
             <div className="form-page">
                 <Header/>
                 <div className="form-wrapper">
-                    <MainProfile/>
-                    <Education/>
-                    <Experience/>
+                    <MainProfile 
+                    profile={profile}
+                    profileChange={profileChange}/>
+                    <Education
+                    educations={educations}
+                    addEducation={addEducation}
+                    deleteEducation={deleteEducation}
+                    changeEducation={changeEducation}/>
+                    <Experience 
+                    professions={professions}
+                    addExperience={addExperience}
+                    deleteExperience={deleteExperience}
+                    changeExperience={changeExperience}/>
                     <FloatingButton previewSwitcher={previewSwitcher}>
                         <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" size="xl"/>
                     </FloatingButton>

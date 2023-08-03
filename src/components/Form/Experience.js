@@ -6,20 +6,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class Experience extends React.Component {
     constructor(props) {
         super(props); 
-        this.state = {
-            entries: [],
-
-        }
     }
 
     render() {
-        const { entries } = this.state;
+        const { professions, addExperience, deleteExperience, changeExperience } = this.props;
 
         return (
-            <div className="form-education-wrapper">
+            <div className="form-experience-wrapper">
                 <CollapsibleSection name="Experience" active={false}>
-                    <CVFormEntry></CVFormEntry>
-                    <button className="white-button add-entry">
+                    {professions.map(d => {
+                        return (
+                            <CVFormEntry
+                            key={d.id}
+                            data={d}
+                            deleteEntry={deleteExperience}
+                            changeEntry={changeExperience}
+                            />
+
+                        );
+                    })}
+                    <button className="white-button add-entry" onClick={addExperience}>
                         <FontAwesomeIcon icon="fa-solid fa-plus"/>
                         <span>Add a professional experience</span>
                     </button>

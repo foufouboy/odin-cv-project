@@ -23,7 +23,7 @@ class MainProfile extends React.Component {
                     </div>
                     <FormInput id="phone-number" label="Phone number" type="text"/>
                     <FormInput id="adress" label="Adress" type="text"/>
-                    <FormInput id="postal-code" label="Postal code" type="text"/>
+                    <FormInput id="postalCode" label="Postal code" type="text"/>
                     <FormInput id="city" label="City" type="text"/>
                 </CollapsibleSection>
             </div>
