@@ -142,3 +142,9 @@
     align-self: end;
     margin-bottom: 30px;
 }
+
+@media screen and (max-width: 640px) {
+    .preview-wrapper {
+        height: 100%;    
+    }
+}

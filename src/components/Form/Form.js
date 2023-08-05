@@ -26,9 +26,10 @@ class Form extends React.Component {
         } = this.props;
 
         const { profile, professions, educations } = this.props.data;
+        const { active } = this.props;
 
         return (
-            <div className="form-page">
+            <div className={"form-page " + (active ? "unactive" : "")}>
                 <Header/>
                 <div className="form-wrapper">
                     <MainProfile 

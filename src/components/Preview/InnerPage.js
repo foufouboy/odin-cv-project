@@ -1,6 +1,7 @@
 import React from "react";
 import CVEntry from "../Generics/CVEntry";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Sample from "./../../assets/images/sample-profile.png"
 
 class InnerPage extends React.Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class InnerPage extends React.Component {
         return (
             <div className="page" ref={this.documentRef}>
                 <div className="page__profile">
-                    <img className="profile__image" src={profile.photo || ""} alt="profile-image" />
+                    <img className="profile__image" src={profile.photo || Sample} alt="profile-image"/>
                     <div className="profile__infos">
                         <h1 className="profile__name">
                             {profile.name} {profile.surname} 

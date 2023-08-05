@@ -225,6 +225,7 @@ class CV extends React.Component {
                 previewSwitcher={this.previewSwitcher}
                 data={data}/>
                 <Form 
+                active={isPreviewActive}
                 previewSwitcher={this.previewSwitcher}
                 data={data}
                 profileChange={this.profileChange}
