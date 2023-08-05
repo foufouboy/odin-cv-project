@@ -29,6 +29,7 @@ class CV extends React.Component {
             ...prevState, 
             isPreviewActive: !prevState.isPreviewActive,
         }));
+
     }
 
     /* PROFILE */
@@ -45,15 +46,41 @@ class CV extends React.Component {
             data: {
                 ...prevState.data,
                 profile: {
-                    ...prevState.profile,
+                    ...prevState.data.profile,
                     [name]: value,
                 }
             }
         }));
+
+        console.log(this.state.data.profile);
     }
 
     fileChange(e) {
-        return e; 
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        
+        reader.onload = () => {
+            this.setState(prevState => ({
+                ...prevState,
+                data: {
+                    ...prevState.data,
+                    profile: {
+                        ...prevState.data.profile,
+                        photo: reader.result,
+                    
+                    }
+                },
+            }));
+            e.target.style.background = `url("${reader.result}")`;
+            e.target.style.backgroundSize = "cover";
+            e.target.style.backgroundPosition = "center";
+            e.target.style.zIndex = 5;
+            e.target.style.border = "1px solid var(--almost-blue-hover)";
+        }
+
+        reader.readAsDataURL(file);
     }
 
 

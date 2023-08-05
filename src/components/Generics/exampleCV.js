@@ -6,6 +6,7 @@ const exampleCV = {
         name: "John",
         surname: "Doe",
         email: "johndoe@doejohn.com",
+        phoneNumber: "123 456 7890",
         adress: "1234 Avenue of the Cypres, Megalopolis",
         city: "Megalopolis",
         postalCode: "666 999",

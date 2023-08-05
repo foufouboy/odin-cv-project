@@ -7,7 +7,7 @@ class FloatingButton extends React.Component {
     }
 
     render() {
-        let { children, classesToAdd, previewSwitcher } = this.props;
+        let { children, previewSwitcher } = this.props;
 
         return (
             <button className={"blue-button floating-button"} onClick={previewSwitcher}>

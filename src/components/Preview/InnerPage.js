@@ -1,7 +1,6 @@
 import React from "react";
 import CVEntry from "../Generics/CVEntry";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Manon from "../../assets/images/sample-profile.png";
 
 class InnerPage extends React.Component {
     constructor(props) {
@@ -9,27 +8,30 @@ class InnerPage extends React.Component {
     }
 
     render() {
+        const { data } = this.props;
+        const { profile, professions, educations } = data;
+
         return (
             <div className="page" ref={this.documentRef}>
                 <div className="page__profile">
-                    <img className="profile__image" src={Manon} alt="profile-image" />
+                    <img className="profile__image" src={profile.photo || ""} alt="profile-image" />
                     <div className="profile__infos">
                         <h1 className="profile__name">
-                            John Doe 
+                            {profile.name} {profile.surname} 
                         </h1>
                         <p className="profile__mail">
                         <FontAwesomeIcon icon="fa-solid fa-envelope"/>
-                        <span>johndoe@gmail.com</span>
+                        <span>{profile.email}</span>
                         </p>
                         <p className="profile__phone">
                         <FontAwesomeIcon icon="fa-solid fa-phone"/>
-                        <span>000 000 0000</span>
+                        <span>{profile.phoneNumber}</span>
                         
                         </p>
                         <p className="profile__home">
                         <FontAwesomeIcon icon="fa-solid fa-home"/>
                             <span>
-                                51th zone
+                                {profile.adress}
                             </span>
                         </p>
                     </div>
@@ -39,15 +41,13 @@ class InnerPage extends React.Component {
                         <div className="content__subsection__title">
                             Formation
                         </div>
-                        <CVEntry/>
-                        <CVEntry/>
+                        {educations.map(d => <CVEntry data={d} key={d.id}/>)}
                     </div>
                     <div className="content__subsection">
                         <div className="content__subsection__title">
-                            Professionnal 
+                            Employment
                         </div>
-                        <CVEntry/>
-                        <CVEntry/>
+                        {professions.map(d => <CVEntry data={d} key={d.id}/>)}
                     </div>
                 </div>
             </div>

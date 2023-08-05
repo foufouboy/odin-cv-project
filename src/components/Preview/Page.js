@@ -10,12 +10,14 @@ class Page extends React.Component {
 
     render() {
 
-        let { docRef } = this.props;
+        let { docRef, data } = this.props;
 
         return (
                 <div className="page-wrapper">
                     <div className="page__outer">
-                        <InnerPage ref={docRef}/>
+                        <InnerPage 
+                        ref={docRef}
+                        data={data}/>
                     </div>
                     <DownloadButton
                         button={() => {

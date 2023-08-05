@@ -161,6 +161,10 @@ textarea:focus {
     border: 1px solid var(--almost-blue);
 }
 
+input[type=file]::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
 label[for=photo] {
     position: relative;
 }

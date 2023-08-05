@@ -17,8 +17,9 @@ class FormInput extends React.Component {
                 value={value}
                 name={id}
                 type={type || "text"} 
+                accept={type === "file" ? ".jpg,.png,.jpeg,.gif,.webp" : undefined}
                 className={classesToAdd} 
-                onChange={e => {changeHandler(e, entryId)}}/>
+                onChange={e => {changeHandler(e, entryId);}}/>
             </div>
         );
     }
