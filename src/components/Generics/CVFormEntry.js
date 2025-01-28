@@ -76,6 +76,7 @@ class EntryForm extends React.Component {
 
     render() {
         const { openEntry, category, data, changeEntry, deleteEntry } = this.props;
+        console.log(data.description);
 
         return (
             <div className="entry-form__container">

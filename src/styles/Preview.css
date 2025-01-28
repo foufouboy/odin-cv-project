@@ -135,6 +135,10 @@
     width: 40%;
 }
 
+.cv-entry .entry__description {
+    width: 60%;
+}
+
 .page__download-button {
     font-size: 1rem; 
     display: flex;
